@@ -1,0 +1,71 @@
+/* ==========================================================================
+   ALBERTO CLOCKS — gallery-details.css
+   Additive styles only: gives each gallery photo a caption card (brand,
+   name, description, price) beneath the image, mirroring the visual
+   language already used for the product cards in style.css.
+   ========================================================================== */
+
+.gallery-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 2px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+.gallery-card:hover {
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-4px);
+  border-color: var(--gold);
+}
+
+/* Image area keeps the existing zoom + "view larger" overlay behavior
+   defined in style.css for .gallery-item / .gallery-grid img. */
+.gallery-card .gallery-item {
+  margin: 0;
+  border-radius: 0;
+}
+
+.gallery-card-body {
+  padding: 1rem 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.gallery-card-brand {
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--accent-strong);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.gallery-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--text-heading);
+  margin: 0 0 0.3rem;
+}
+.gallery-card-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
+  flex: 1;
+}
+.gallery-card-price {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: var(--text-heading);
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.65rem;
+}
+
+@media (max-width: 575.98px) {
+  .gallery-card-body {
+    padding: 0.85rem 0.9rem 1rem;
+  }
+  .gallery-card-title {
+    font-size: 1rem;
+  }
+}

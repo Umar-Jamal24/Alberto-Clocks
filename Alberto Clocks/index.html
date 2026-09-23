@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alberto Clocks | Luxury Watches, Repair &amp; Appraisal</title>
+<meta name="description" content="Alberto Clocks — a fictional academic-project luxury watch retailer offering premium and vintage watches, professional repair services, and watch appraisal.">
+
+<!-- Bootstrap 5.3.8 CSS (CDN) -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<!-- Project stylesheets -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/cart-wishlist.css">
+<link rel="stylesheet" href="css/gallery-details.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<a href="#mainContent" class="skip-link">Skip to main content</a>
+
+
+<!-- ================= HEADER / NAVIGATION ================= -->
+<header class="site-header">
+  <div class="container-alberto">
+    <div class="d-flex align-items-center justify-content-between py-3">
+
+      <a href="#home" class="brand-mark">ALBERTO <span>CLOCKS</span><span class="brand-sub">WATCH&nbsp;CO.</span></a>
+
+      <nav class="main-nav d-none d-lg-flex align-items-center gap-1" aria-label="Primary">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#products">Products</a>
+        <a class="nav-link" href="#technology">Technology</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#store-locator">Store Locator</a>
+        <a class="nav-link" href="#about">About Us</a>
+        <a class="nav-link" href="#contact">Contact Us</a>
+        <a class="nav-link" href="#support">Support</a>
+      </nav>
+
+      <div class="d-flex align-items-center gap-2">
+        <span class="visitor-counter d-none d-md-inline">Visitors: <strong data-visitor-count>0</strong></span>
+
+        <!-- Wishlist and Cart icons (open the panels defined near the end of this file) -->
+        <button type="button" class="header-icon-btn position-relative" data-bs-toggle="offcanvas" data-bs-target="#wishlistOffcanvas" aria-controls="wishlistOffcanvas" aria-label="Open wishlist">
+          <i class="bi bi-heart" aria-hidden="true"></i>
+          <span class="header-badge d-none" data-wishlist-count aria-hidden="true">0</span>
+        </button>
+
+        <button type="button" class="header-icon-btn position-relative" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" aria-label="Open cart">
+          <i class="bi bi-bag" aria-hidden="true"></i>
+          <span class="header-badge d-none" data-cart-count aria-hidden="true">0</span>
+        </button>
+
+        <button type="button" class="header-icon-btn" data-theme-toggle aria-pressed="false" aria-label="Toggle dark and light theme">
+          <i class="bi bi-moon-stars theme-icon-light" aria-hidden="true"></i>
+          <i class="bi bi-sun theme-icon-dark" aria-hidden="true"></i>
+        </button>
+
+        <button type="button" class="header-icon-btn d-none d-sm-inline-flex" data-bs-toggle="modal" data-bs-target="#loginModal" aria-label="Login">
+          <i class="bi bi-person" aria-hidden="true"></i>
+        </button>
+
+        <button class="header-icon-btn d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavOffcanvas" aria-controls="mainNavOffcanvas" aria-label="Open menu">
+          <i class="bi bi-list" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile navigation (Bootstrap offcanvas) -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mainNavOffcanvas" aria-labelledby="mainNavOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title brand-mark" id="mainNavOffcanvasLabel">ALBERTO</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <nav class="main-nav d-flex flex-column" aria-label="Mobile primary">
+        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#products">Products</a>
+        <a class="nav-link" href="#technology">Technology</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#gallery">Gallery</a>
+        <a class="nav-link" href="#store-locator">Store Locator</a>
+        <a class="nav-link" href="#about">About Us</a>
+        <a class="nav-link" href="#contact">Contact Us</a>
+        <a class="nav-link" href="#support">Support</a>
+      </nav>
+      <div class="header-actions-mobile">
+        <button type="button" class="btn-alberto btn-outline-alberto flex-fill" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="offcanvas">
+          <i class="bi bi-person" aria-hidden="true"></i> Login
+        </button>
+      </div>
+      <p class="visitor-counter mt-4">Visitors: <strong data-visitor-count>0</strong></p>
+    </div>
+  </div>
+</header>
+
+<main id="mainContent">
+
+  <!-- ================= HERO ================= -->
+  <section id="home" class="hero-section">
+    <div class="hero-media">
+      <img src="images/ChatGPT Image Sep 16, 2026, 11_47_16 AM.png" onerror="this.src=ALBERTO_FALLBACK_IMAGE;" class="opacity-50 ">
+    </div>
+    <div class="container-alberto">
+      <div class="hero-content">
+        <span class="section-label">ALBERTO CLOCKS</span>
+        <h1>Time. Crafted to Perfection.</h1>
+        <p>Discover timeless craftsmanship, exceptional precision, and a collection of watches designed to define every moment.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn-alberto btn-gold-alberto">Explore Collection</a>
+          <a href="#services" class="btn-alberto btn-outline-alberto">Discover Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="section">
+    <div class="container-alberto">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal-on-scroll">
+          <div class="about-media">
+            <img src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&w=1000&q=80" alt="Watchmaker's tools and a watch movement on a workbench" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+            <div class="about-media-caption">Est. as a class project, 2026</div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal-on-scroll">
+          <span class="section-label">ABOUT ALBERTO CLOCKS</span>
+          <h2>A House Built Around the Watch</h2>
+          <p>Alberto Clocks brings together three things under one roof: a carefully curated collection of watches, hands-on repair and maintenance for mechanical, automatic, and quartz movements, and honest, independent appraisal for collectors and sellers alike.</p>
+          <p>The brand's philosophy is simple — a watch should be chosen carefully, cared for properly, and valued honestly. Every part of the site reflects that idea, from the way watches are presented to the way repair and appraisal requests are handled.</p>
+          <ul class="about-points">
+            <li><span class="dot">&#8213;</span> Curated retail collection spanning luxury, vintage, and modern smart watches</li>
+            <li><span class="dot">&#8213;</span> In-house repair and maintenance services for mechanical, automatic, and quartz movements</li>
+            <li><span class="dot">&#8213;</span> Independent appraisal and valuation for buyers, sellers, and collectors</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED COLLECTION ================= -->
+  <section id="featured" class="section section-alt">
+    <div class="container-alberto">
+      <div class="section-header center reveal-on-scroll">
+        <span class="section-label">FEATURED COLLECTION</span>
+        <h2>This Season's Selection</h2>
+        <hr class="divider-gold">
+        <p>A short list of pieces our team returns to again and again, spanning three very different watchmaking traditions.</p>
+      </div>
+      <div class="row g-4" id="featuredGrid"><!-- Rendered by app.js --></div>
+    </div>
+  </section>
+
+  <!-- ================= PRODUCTS: CATEGORIES + LISTING ================= -->
+  <section id="products" class="section">
+    <div class="container-alberto">
+      <div class="section-header center reveal-on-scroll">
+        <span class="section-label">THE COLLECTION</span>
+        <h2>Watches by Category</h2>
+        <hr class="divider-gold">
+        <p>Browse the full catalogue by category, or search for a specific watch, brand, or style.</p>
+      </div>
+
+      <div class="category-tabs reveal-on-scroll" role="tablist" aria-label="Filter watches by category">
+        <button type="button" class="category-tab active" data-category-filter="all">All Watches</button>
+        <button type="button" class="category-tab" data-category-filter="luxury">Luxury</button>
+        <button type="button" class="category-tab" data-category-filter="vintage">Vintage</button>
+        <button type="button" class="category-tab" data-category-filter="classic">Classic</button>
+        <button type="button" class="category-tab" data-category-filter="smart">Smart</button>
+        <button type="button" class="category-tab" data-category-filter="sports">Sports</button>
+        <button type="button" class="category-tab" data-category-filter="premium">Premium</button>
+        <button type="button" class="category-tab" data-category-filter="limited">Limited Edition</button>
+      </div>
+
+      <div class="product-toolbar reveal-on-scroll">
+        <span id="productResultsCount" class="text-muted small"></span>
+        <div class="search-field">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <label for="productSearchInput" class="visually-hidden">Search watches</label>
+          <input type="search" id="productSearchInput" placeholder="Search by name, brand, or category">
+        </div>
+      </div>
+
+      <div class="row g-4" id="productGrid"><!-- Rendered by app.js --></div>
+
+      <div id="productEmptyState" class="results-empty d-none">
+        <i class="bi bi-search fs-2 d-block mb-2"></i>
+        <p class="mb-0">No watches match your search. Try a different name, brand, or category.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPLETE PRICE LIST ================= -->
+  <section id="price-list" class="section section-alt">
+    <div class="container-alberto">
+      <div class="section-header center reveal-on-scroll">
+        <span class="section-label">PRICE LIST</span>
+        <h2>Complete Price List</h2>
+        <hr class="divider-gold">
+        <p>Every watch in the collection, in one place. Prices match those shown on each product card and details view.</p>
+      </div>
+      <div class="price-table-wrap reveal-on-scroll">
+        <div class="table-responsive">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Watch</th>
+                <th>Brand</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Availability</th>
+              </tr>
+            </thead>
+            <tbody id="priceListBody"><!-- Rendered by app.js --></tbody>
+          </table>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ================= TECHNOLOGY ================= -->
+  <section id="technology" class="section">
+    <div class="container-alberto">
+      <div class="section-header center reveal-on-scroll">
+        <span class="section-label">INSIDE THE WATCH</span>
+        <h2>Watch Technology</h2>
+        <hr class="divider-gold">
+        <p>A short guide to the movements and features you'll come across in the collection.</p>
+      </div>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="bi bi-lightning-charge" aria-hidden="true"></i></div>
+            <h4>Quartz Movement</h4>
+            <p>Quartz watches use a battery to send an electrical current through a tiny quartz crystal, which vibrates at a precise, constant frequency to regulate timekeeping.</p>
+            <button type="button" class="tech-learn-more">Learn More</button>
+            <div class="tech-more-text">This electronic regulation is why quartz watches are typically very accurate and low-maintenance, generally needing only an occasional battery replacement.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="bi bi-arrow-repeat" aria-hidden="true"></i></div>
+            <h4>Automatic Movement</h4>
+            <p>Automatic watches contain a rotor that spins with the natural motion of the wearer's wrist, winding the mainspring so the watch runs without manual winding or a battery.</p>
+            <button type="button" class="tech-learn-more">Learn More</button>
+            <div class="tech-more-text">Worn regularly, an automatic watch can run continuously; left unworn for a few days, it will need winding or a new burst of wrist motion to restart.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="bi bi-gear" aria-hidden="true"></i></div>
+            <h4>Mechanical Movement</h4>
+            <p>Mechanical watches rely entirely on a system of springs, gears, and an escapement mechanism, hand-wound by turning the crown rather than being powered electronically.</p>
+            <button type="button" class="tech-learn-more">Learn More</button>
+            <div class="tech-more-text">Because every part is mechanical, these movements are often prized for their craftsmanship and are frequently visible through an exhibition case back.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="bi bi-brightness-high" aria-hidden="true"></i></div>
+            <h4>Eco-Drive Technology</h4>
+            <p>Citizen's Eco-Drive technology uses a solar cell beneath the dial to convert light — natural or artificial — into electrical energy that powers the watch.</p>
+            <button type="button" class="tech-learn-more">Learn More</button>
+            <div class="tech-more-text">The energy is stored in a rechargeable cell, so an Eco-Drive watch kept in reasonable light rarely, if ever, needs a battery replacement.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="bi bi-smartwatch" aria-hidden="true"></i></div>
+            <h4>Smart Watch Technology</h4>
+            <p>Smart watches pair with a smartphone to deliver notifications, and use built-in sensors to track activity, heart rate, and sleep, all shown on a digital display.</p>
+            <button type="button" class="tech-learn-more">Learn More</button>
+            <div class="tech-more-text">Unlike traditional movements, smart watches are effectively small computers, so they need regular charging in exchange for their expanded feature set.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="bi bi-stopwatch" aria-hidden="true"></i></div>
+            <h4>Chronograph</h4>
+            <p>A chronograph adds an independent stopwatch function to a regular watch, using extra sub-dials and pushers to start, stop, and reset an elapsed-time measurement.</p>
+            <button type="button" class="tech-learn-more">Learn More</button>
+            <div class="tech-more-text">The main hands keep normal time throughout, while the chronograph hands only move while timing an event, such as a lap or an interval.</div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal-on-scroll">
+          <div class="tech-card">
+            <div class="tech-icon"><i class="bi bi-droplet" aria-hidden="true"></i></div>
+            <h4>Water Resistance</h4>
+            <p>Water-resistance ratings, usually shown in meters, describe the pressure a watch is built to withstand under laboratory conditions, not a literal depth for diving or swimming.</p>
+            <button type="button" class="tech-learn-more">Learn More</button>
+            <div class="tech-more-text">As a general guide, ratings around 30–50m suit splashes only, 100–200m suit swimming, and dedicated dive-rated watches are built and tested for actual diving.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES: REPAIR + APPRAISAL ================= -->
+  <section id="services" class="section section-alt">
+    <div class="container-alberto">
+
+      <!-- Repair -->
+      <div class="row g-5 align-items-start mb-5 pb-5" style="border-bottom:1px solid var(--border-color);">
+        <div class="col-lg-5 reveal-on-scroll">
+          <span class="section-label">SERVICES</span>
+          <h2>Watch Repair</h2>
+          <hr class="divider-gold">
+          <p>Alberto Clocks offers full-service repair for mechanical, automatic, and quartz watches, from routine maintenance to more involved movement servicing.</p>
+          <ul class="service-list">
+            <li><span class="gold-tick">&#10003;</span> General watch inspection</li>
+            <li><span class="gold-tick">&#10003;</span> Battery replacement</li>
+            <li><span class="gold-tick">&#10003;</span> Strap and bracelet replacement</li>
+            <li><span class="gold-tick">&#10003;</span> Cleaning and maintenance</li>
+            <li><span class="gold-tick">&#10003;</span> Movement servicing</li>
+            <li><span class="gold-tick">&#10003;</span> General repair assessment</li>
+          </ul>
+          <p class="fallback-note mb-4">Sample services for this fictional project. Alberto Clocks does not claim manufacturer certification for any brand.</p>
+          <button type="button" class="btn-alberto btn-primary-alberto" data-bs-toggle="modal" data-bs-target="#repairModal">Request a Repair Assessment</button>
+        </div>
+        <div class="col-lg-7 reveal-on-scroll">
+          <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1000&q=80" class="w-100 rounded-0" style="border-radius:2px; object-fit:cover; max-height:420px;" alt="A watchmaker repairing a wristwatch movement with precision tools" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+        </div>
+      </div>
+
+      <!-- Appraisal -->
+      <div class="row g-5 align-items-start">
+        <div class="col-lg-7 order-lg-1 reveal-on-scroll">
+          <img src="https://images.unsplash.com/photo-1660844817855-3ecc7ef21f12?auto=format&fit=crop&w=1000&q=80" class="w-100" style="border-radius:2px; object-fit:cover; max-height:420px;" alt="A luxury watch being examined closely for appraisal" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+        </div>
+        <div class="col-lg-5 order-lg-2 reveal-on-scroll">
+          <span class="section-label">SERVICES</span>
+          <h2>Watch Appraisal &amp; Valuation</h2>
+          <hr class="divider-gold">
+          <p>Whether you're buying, selling, or insuring a piece, our appraisal service provides a documented assessment of condition, authenticity indicators, and estimated value.</p>
+          <ul class="service-list">
+            <li><span class="gold-tick">&#10003;</span> General watch appraisal</li>
+            <li><span class="gold-tick">&#10003;</span> Condition assessment</li>
+            <li><span class="gold-tick">&#10003;</span> Brand and model identification</li>
+            <li><span class="gold-tick">&#10003;</span> Documentation review</li>
+            <li><span class="gold-tick">&#10003;</span> Estimated valuation</li>
+          </ul>
+          <p class="fallback-note mb-4">This is a fictional project — any appraisal request submitted here is a frontend demonstration only, not a real appraisal.</p>
+          <button type="button" class="btn-alberto btn-primary-alberto" data-bs-toggle="modal" data-bs-target="#appraisalModal">Request an Appraisal</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= GALLERY ================= -->
+  <section id="gallery" class="section">
+    <div class="container-alberto">
+      <div class="section-header center reveal-on-scroll">
+        <span class="section-label">GALLERY</span>
+        <h2>A Closer Look</h2>
+        <hr class="divider-gold">
+        <p>Luxury, vintage, and lifestyle photography from the Alberto Clocks collection. Click any image for a larger view.</p>
+      </div>
+      <div class="row g-3 gallery-grid reveal-on-scroll">
+        <div class="col-6 col-md-4">
+          <div class="gallery-card">
+            <div class="gallery-item">
+              <img data-gallery-image data-product-id="2" data-caption="Oyster Classic 41 by Rolex — $14,500. A timeless steel and gold automatic watch with iconic proportions." data-large="https://images.unsplash.com/photo-1639006570490-79c0c53f1080?auto=format&fit=crop&w=1400&q=85" src="https://images.unsplash.com/photo-1639006570490-79c0c53f1080?auto=format&fit=crop&w=500&q=80" alt="Oyster Classic 41 by Rolex, luxury automatic watch studio detail" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-brand">Rolex</div>
+              <h4 class="gallery-card-title">Oyster Classic 41</h4>
+              <p class="gallery-card-desc">A timeless steel and gold automatic watch with iconic proportions.</p>
+              <div class="gallery-card-price">$14,500</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-card">
+            <div class="gallery-item">
+              <img data-gallery-image data-product-id="7" data-caption="Continental Vintage Dress by Bulova — $980. A slim mechanical dress watch with an ivory dial." data-large="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=1400&q=85" src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=500&q=80" alt="Continental Vintage Dress by Bulova, vintage dress watch on a leather strap" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-brand">Bulova</div>
+              <h4 class="gallery-card-title">Continental Vintage Dress</h4>
+              <p class="gallery-card-desc">A slim mechanical dress watch with an ivory dial.</p>
+              <div class="gallery-card-price">$980</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-card">
+            <div class="gallery-item">
+              <img data-gallery-image data-product-id="16" data-caption="Vintage Gold Reserve by Alberto Heritage — $6,700. A gold-cased mechanical watch with a power reserve indicator." data-large="https://images.unsplash.com/photo-1637160151663-a410315e4e75?auto=format&fit=crop&w=1400&q=85" src="https://images.unsplash.com/photo-1637160151663-a410315e4e75?auto=format&fit=crop&w=500&q=80" alt="Vintage Gold Reserve by Alberto Heritage, classic wristwatch close-up" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-brand">Alberto Heritage</div>
+              <h4 class="gallery-card-title">Vintage Gold Reserve</h4>
+              <p class="gallery-card-desc">A gold-cased mechanical watch with a power reserve indicator.</p>
+              <div class="gallery-card-price">$6,700</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-card">
+            <div class="gallery-item">
+              <img data-gallery-image data-product-id="15" data-caption="Alberto Nightwatch Diver by Alberto Heritage — $3,100. An automatic dive watch built for low-light legibility." data-large="https://images.unsplash.com/photo-1620625515032-6ed0c1790c75?auto=format&fit=crop&w=1400&q=85" src="https://images.unsplash.com/photo-1620625515032-6ed0c1790c75?auto=format&fit=crop&w=500&q=80" alt="Alberto Nightwatch Diver by Alberto Heritage, diver watch lifestyle photograph on a wrist" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-brand">Alberto Heritage</div>
+              <h4 class="gallery-card-title">Alberto Nightwatch Diver</h4>
+              <p class="gallery-card-desc">An automatic dive watch built for low-light legibility.</p>
+              <div class="gallery-card-price">$3,100</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-card">
+            <div class="gallery-item">
+              <img data-gallery-image data-product-id="8" data-caption="Alberto Connect Pro by Alberto Tech — $399. A connected smartwatch with health tracking and notifications." data-large="https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=1400&q=85" src="https://images.unsplash.com/photo-1622434641406-a158123450f9?auto=format&fit=crop&w=500&q=80" alt="Alberto Connect Pro by Alberto Tech, smart watch display close-up" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-brand">Alberto Tech</div>
+              <h4 class="gallery-card-title">Alberto Connect Pro</h4>
+              <p class="gallery-card-desc">A connected smartwatch with health tracking and notifications.</p>
+              <div class="gallery-card-price">$399</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="gallery-card">
+            <div class="gallery-item">
+              <img data-gallery-image data-product-id="11" data-caption="Alberto Centennial Limited by Alberto Heritage — $22,000. A limited-run anniversary piece with skeletonized dial." data-large="https://images.unsplash.com/photo-1619946928632-abefa12506e2?auto=format&fit=crop&w=1400&q=85" src="https://images.unsplash.com/photo-1619946928632-abefa12506e2?auto=format&fit=crop&w=500&q=80" alt="Alberto Centennial Limited by Alberto Heritage, exposed watch movement through an exhibition case back" loading="lazy" onerror="this.src=ALBERTO_FALLBACK_IMAGE;">
+            </div>
+            <div class="gallery-card-body">
+              <div class="gallery-card-brand">Alberto Heritage</div>
+              <h4 class="gallery-card-title">Alberto Centennial Limited</h4>
+              <p class="gallery-card-desc">A limited-run anniversary piece with skeletonized dial.</p>
+              <div class="gallery-card-price">$22,000</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STORE LOCATOR ================= -->
+ ```html
+<!-- ================= STORE LOCATOR ================= -->
+<section id="store-locator" class="section section-alt">
+
+  <div class="container-alberto">
+
+    <div class="section-header center reveal-on-scroll">
+
+      <span class="section-label">VISIT US</span>
+
+      <h2>Store Locator</h2>
+
+      <hr class="divider-gold">
+
+      <p>
+        Visit one of our boutiques for a hands-on look,
+        expert advice, or in-person servicing.
+      </p>
+
+    </div>
+
+
+    <!-- Store Cards -->
+    <div class="row g-4 mb-4">
+
+      <!-- Karachi -->
+      <div class="col-md-4 reveal-on-scroll">
+
+        <div class="store-card">
+
+          <h4>Alberto Clocks — Clifton</h4>
+
+          <ul>
+
+            <li>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              Block 5, Clifton, Karachi, Pakistan
+              <span class="text-muted">(sample address)</span>
+            </li>
+
+            <li>
+              <i class="bi bi-telephone" aria-hidden="true"></i>
+              +92 21 555 0142
+              <span class="text-muted">(sample number)</span>
+            </li>
+
+            <li>
+              <i class="bi bi-clock" aria-hidden="true"></i>
+              Mon–Sat, 11:00 AM – 9:00 PM
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- Lahore -->
+      <div class="col-md-4 reveal-on-scroll">
+
+        <div class="store-card">
+
+          <h4>Alberto Clocks — Gulberg</h4>
+
+          <ul>
+
+            <li>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              MM Alam Road, Gulberg, Lahore, Pakistan
+              <span class="text-muted">(sample address)</span>
+            </li>
+
+            <li>
+              <i class="bi bi-telephone" aria-hidden="true"></i>
+              +92 42 555 0198
+              <span class="text-muted">(sample number)</span>
+            </li>
+
+            <li>
+              <i class="bi bi-clock" aria-hidden="true"></i>
+              Mon–Sat, 11:00 AM – 9:00 PM
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <!-- Islamabad -->
+      <div class="col-md-4 reveal-on-scroll">
+
+        <div class="store-card">
+
+          <h4>Alberto Clocks — Blue Area</h4>
+
+          <ul>
+
+            <li>
+              <i class="bi bi-geo-alt" aria-hidden="true"></i>
+              Blue Area, Islamabad, Pakistan
+              <span class="text-muted">(sample address)</span>
+            </li>
+
+            <li>
+              <i class="bi bi-telephone" aria-hidden="true"></i>
+              +92 51 555 0176
+              <span class="text-muted">(sample number)</span>
+            </li>
+
+            <li>
+              <i class="bi bi-clock" aria-hidden="true"></i>
+              Mon–Sat, 11:00 AM – 8:00 PM
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Store Locator Map -->
+    <div
+      id="storeLocatorMap"
+      class="store-locator-map reveal-on-scroll"
+      role="img"
+      aria-label="Map showing Alberto Clocks boutique locations in Karachi, Lahore, and Islamabad">
+    </div>
+
+  </div>
+
+</section>
+
+
+
+### 2. `geolocation.js`
+
+Replace the **entire current `geolocation.js`** with this version:
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="section section-alt">
+    <div class="container-alberto">
+      <div class="section-header center reveal-on-scroll">
+        <span class="section-label">TESTIMONIALS</span>
+        <h2>What Customers Say</h2>
+        <hr class="divider-gold">
+      </div>
+      <div class="row g-4">
+        <div class="col-md-4 reveal-on-scroll">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"The repair team brought my grandfather's old mechanical watch back to life. It keeps time beautifully again."</p>
+            <div class="testimonial-name">Amir H.</div>
+            <div class="testimonial-role">Repair customer</div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal-on-scroll">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="testimonial-quote">"The appraisal report was thorough and easy to understand, and it gave me real confidence before I sold my watch."</p>
+            <div class="testimonial-name">Sana K.</div>
+            <div class="testimonial-role">Appraisal customer</div>
+          </div>
+        </div>
+        <div class="col-md-4 reveal-on-scroll">
+          <div class="testimonial-card">
+            <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9730;</div>
+            <p class="testimonial-quote">"Browsing the collection felt like walking into a real boutique. The categories made it easy to find exactly my style."</p>
+            <div class="testimonial-name">Farhan M.</div>
+            <div class="testimonial-role">Retail customer</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- ================= SUPPORT / FAQ ================= -->
+  <section id="support" class="section">
+    <div class="container-alberto">
+      <div class="row g-5">
+        <div class="col-lg-5 reveal-on-scroll">
+          <span class="section-label">SUPPORT</span>
+          <h2>Frequently Asked Questions</h2>
+          <hr class="divider-gold">
+          <p>Can't find what you're looking for? Our contact form is always open.</p>
+          <a href="#contact" class="btn-alberto btn-outline-alberto">Go to Contact Us</a>
+        </div>
+        <div class="col-lg-7 reveal-on-scroll">
+          <div class="accordion" id="faqAccordion">
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What watch categories do you offer?</button>
+              </h3>
+              <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">The collection spans luxury, vintage, classic, smart, sports, premium, and limited-edition watches. You can filter by category or search by name or brand in the Products section.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Where can I see full details and pricing for a watch?</button>
+              </h3>
+              <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Click any watch card or its "View Details" button to open a details view with the full description, technology, features, and price. The same price also appears in the complete price list.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">How do I request a repair?</button>
+              </h3>
+              <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Open the Services section and select "Request a Repair Assessment." Fill in your contact details along with your watch's brand, model, and the service you need.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">How does the appraisal service work?</button>
+              </h3>
+              <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Submit the appraisal request form with details about your watch. In this academic project, submitting the form is a frontend demonstration only — no real appraisal is performed.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Where are your stores located?</button>
+              </h3>
+              <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Sample store locations are listed in the Store Locator section. These are fictional addresses created for this project, not real store locations.</div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Is a watch marked "Out of Stock" still shown?</button>
+              </h3>
+              <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Yes. Availability status — In Stock, Limited Stock, or Out of Stock — is shown on the product card, its details view, and the price list, so you always know a watch's current status.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT US ================= -->
+  <section id="contact" class="section section-alt">
+    <div class="container-alberto">
+      <div class="section-header center reveal-on-scroll">
+        <span class="section-label">GET IN TOUCH</span>
+        <h2>Contact Us</h2>
+        <hr class="divider-gold">
+      </div>
+      <div class="row g-5">
+        <div class="col-lg-5 reveal-on-scroll">
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></div>
+            <div>
+              <h5>Email</h5>
+              <p>hello@albertoclocks.example </p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-telephone" aria-hidden="true"></i></div>
+            <div>
+              <h5>Phone</h5>
+              <p>+92 21 555 0142 </p>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></div>
+            <div>
+              <h5>Address</h5>
+              <p>Block 5, Clifton, Karachi, Pakistan </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7 reveal-on-scroll">
+          <form id="contactForm" class="form-alberto row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="contactName">Full Name</label>
+              <input type="text" class="form-control" id="contactName" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-md-6">
+              <label for="contactEmail">Email Address</label>
+              <input type="email" class="form-control" id="contactEmail" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="col-12">
+              <label for="contactSubject">Subject</label>
+              <input type="text" class="form-control" id="contactSubject" required>
+              <div class="invalid-feedback">Please enter a subject.</div>
+            </div>
+            <div class="col-12">
+              <label for="contactMessage">Message</label>
+              <textarea class="form-control" id="contactMessage" rows="4" required minlength="10"></textarea>
+              <div class="invalid-feedback">Please enter a message of at least 10 characters.</div>
+            </div>
+            <div class="col-12">
+              <div id="contactSuccessAlert" class="alert-alberto-success d-none" role="alert">
+                <i class="bi bi-check-circle me-1" aria-hidden="true"></i>
+                Thank you — this is a frontend demonstration, so no message has actually been sent.
+              </div>
+              <button type="submit" class="btn-alberto btn-primary-alberto">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER + SITEMAP ================= -->
+<footer class="site-footer">
+  <div class="container-alberto">
+    <div class="row g-4 pb-4">
+      <div class="col-lg-4">
+        <a href="#home" class="brand-mark d-inline-flex mb-3">ALBERTO <span>CLOCKS</span></a>
+        <p>A fictional luxury watch retailer, repair house, and appraisal service, built as an academic web development project.</p>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Sitemap</h5>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#technology">Technology</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>&nbsp;</h5>
+        <ul class="footer-links">
+          <li><a href="#services">Repair Services</a></li>
+          <li><a href="#services">Appraisal Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#store-locator">Store Locator</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>&nbsp;</h5>
+        <ul class="footer-links">
+          <li><a href="#support">Support</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#price-list">Price List</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <h5>Set Your Location</h5>
+        <form id="manualLocationForm" class="d-flex flex-column gap-2">
+          <label for="manualLocationInput" class="visually-hidden">Your city</label>
+          <input type="text" id="manualLocationInput" class="form-control form-control-sm" placeholder="Enter your city">
+          <button type="submit" class="btn-alberto btn-sm-alberto btn-outline-alberto" style="color:var(--ivory); border-color:#4a4d43;">Update Ticker</button>
+        </form>
+        <p id="locationStatus" class="mt-2" style="font-size:0.75rem; color:#8f8c7f;"></p>
+      </div>
+    </div>
+
+    <p class="footer-disclaimer">Alberto Clocks is a fictional company created solely for an academic eProject. It is not a real retailer, is not an authorized dealer for any watch brand mentioned, and does not process real purchases, repairs, appraisals, or messages. All forms on this site are frontend demonstrations only.</p>
+
+    <div class="footer-bottom">
+      <span>&copy; 2026 Alberto Clocks — Academic Project. All rights reserved.</span>
+      <span>Built with HTML5, Bootstrap 5.3.8 &amp; vanilla JavaScript.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BOTTOM TICKER ================= -->
+<div class="bottom-ticker" role="marquee" aria-label="Current location, date, and time">
+  <div class="ticker-track">
+    <span><span data-ticker-location>Karachi, Pakistan (sample location)</span><span class="gold-pipe">|</span><span data-ticker-date>Monday, January 1, 2026</span><span class="gold-pipe">|</span><span data-ticker-time>12:00:00 AM</span></span>
+    <span><span data-ticker-location>Karachi, Pakistan (sample location)</span><span class="gold-pipe">|</span><span data-ticker-date>Monday, January 1, 2026</span><span class="gold-pipe">|</span><span data-ticker-time>12:00:00 AM</span></span>
+  </div>
+</div>
+
+<!-- ================= MODAL: PRODUCT DETAILS (single reusable modal) ================= -->
+<div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content alberto-modal">
+      <div class="modal-header border-0 pb-0">
+        <h2 class="visually-hidden" id="productDetailsModalLabel">Watch details</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="row g-0">
+          <div class="col-md-5">
+            <img id="modalProductImage" class="modal-alberto-image" src="" alt="">
+          </div>
+          <div class="col-md-7">
+            <div class="modal-alberto-body p-4">
+              <div class="modal-alberto-brand" id="modalProductBrand"></div>
+              <h3 id="modalProductName"></h3>
+              <span class="section-label" id="modalProductCategory"></span>
+              <div class="modal-alberto-price" id="modalProductPrice"></div>
+              <p id="modalProductFullDesc"></p>
+              <p class="mb-1"><strong>Technology:</strong> <span id="modalProductTechnology"></span></p>
+              <p class="mb-2"><strong>Availability:</strong> <span id="modalProductAvailability" class="availability-pill"></span></p>
+              <ul class="modal-feature-list" id="modalProductFeatures"></ul>
+              <div class="modal-alberto-actions">
+                <button type="button" id="modalAddToCartBtn" class="btn-alberto btn-primary-alberto">
+                  <i class="bi bi-bag-plus" aria-hidden="true"></i> Add to Cart
+                </button>
+                <button type="button" id="modalAddToWishlistBtn" class="btn-alberto btn-outline-alberto">
+                  <i class="bi bi-heart" aria-hidden="true"></i> Add to Wishlist
+                </button>
+                <button type="button" id="modalBuyNowBtn" class="btn-alberto btn-gold-alberto modal-buy-now">
+                  <i class="bi bi-lightning-charge" aria-hidden="true"></i> Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: GALLERY LIGHTBOX ================= -->
+<div class="modal fade" id="galleryLightbox" tabindex="-1" aria-labelledby="galleryLightboxLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content alberto-modal">
+      <div class="modal-header border-0">
+        <h2 class="visually-hidden" id="galleryLightboxLabel">Gallery image</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-0 text-center">
+        <img id="galleryLightboxImage" src="" alt="" class="w-100" style="border-radius:2px;">
+        <p id="galleryLightboxCaption" class="mt-3 text-muted small mb-0"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: REPAIR REQUEST ================= -->
+<div class="modal fade" id="repairModal" tabindex="-1" aria-labelledby="repairModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content alberto-modal">
+      <div class="modal-header">
+        <h2 class="modal-title fs-4" id="repairModalLabel">Request a Repair Assessment</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="repairForm" class="form-alberto row g-3 needs-validation" novalidate>
+          <div class="col-md-6">
+            <label for="repairName">Full Name</label>
+            <input type="text" class="form-control" id="repairName" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="repairEmail">Email Address</label>
+            <input type="email" class="form-control" id="repairEmail" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="repairBrand">Watch Brand</label>
+            <input type="text" class="form-control" id="repairBrand" required>
+            <div class="invalid-feedback">Please enter the watch brand.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="repairModelInput">Watch Model</label>
+            <input type="text" class="form-control" id="repairModelInput" required>
+            <div class="invalid-feedback">Please enter the watch model.</div>
+          </div>
+          <div class="col-12">
+            <label for="repairService">Type of Service Required</label>
+            <select class="form-select" id="repairService" required>
+              <option value="" selected disabled>Choose a service</option>
+              <option>General watch inspection</option>
+              <option>Battery replacement</option>
+              <option>Strap and bracelet replacement</option>
+              <option>Cleaning and maintenance</option>
+              <option>Movement servicing</option>
+              <option>General repair assessment</option>
+            </select>
+            <div class="invalid-feedback">Please select a service.</div>
+          </div>
+          <div class="col-12">
+            <label for="repairMessage">Additional Message</label>
+            <textarea class="form-control" id="repairMessage" rows="3"></textarea>
+            <div class="form-text">Optional — describe the issue in more detail.</div>
+          </div>
+          <div class="col-12">
+            <div id="repairSuccessAlert" class="alert-alberto-success d-none" role="alert">
+              <i class="bi bi-check-circle me-1" aria-hidden="true"></i>
+              Request received — this is a frontend demonstration, so no request has actually been sent to a real company.
+            </div>
+            <button type="submit" class="btn-alberto btn-primary-alberto">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: APPRAISAL REQUEST ================= -->
+<div class="modal fade" id="appraisalModal" tabindex="-1" aria-labelledby="appraisalModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content alberto-modal">
+      <div class="modal-header">
+        <h2 class="modal-title fs-4" id="appraisalModalLabel">Request a Watch Appraisal</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="appraisalForm" class="form-alberto row g-3 needs-validation" novalidate>
+          <div class="col-md-6">
+            <label for="appraisalName">Full Name</label>
+            <input type="text" class="form-control" id="appraisalName" required>
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="appraisalEmail">Email Address</label>
+            <input type="email" class="form-control" id="appraisalEmail" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="appraisalBrand">Watch Brand</label>
+            <input type="text" class="form-control" id="appraisalBrand" required>
+            <div class="invalid-feedback">Please enter the watch brand.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="appraisalModelInput">Watch Model</label>
+            <input type="text" class="form-control" id="appraisalModelInput" required>
+            <div class="invalid-feedback">Please enter the watch model.</div>
+          </div>
+          <div class="col-md-6">
+            <label for="appraisalAge">Approximate Age (if known)</label>
+            <input type="text" class="form-control" id="appraisalAge" placeholder="e.g. about 10 years">
+          </div>
+          <div class="col-md-6">
+            <label for="appraisalImage">Reference Image (optional)</label>
+            <input type="file" class="form-control" id="appraisalImage" accept="image/*">
+            <div class="form-text">For this demonstration, no file is actually uploaded or stored.</div>
+          </div>
+          <div class="col-12">
+            <label for="appraisalDescription">Description</label>
+            <textarea class="form-control" id="appraisalDescription" rows="3" required minlength="10"></textarea>
+            <div class="invalid-feedback">Please describe the watch in at least 10 characters.</div>
+          </div>
+          <div class="col-12">
+            <div id="appraisalSuccessAlert" class="alert-alberto-success d-none" role="alert">
+              <i class="bi bi-check-circle me-1" aria-hidden="true"></i>
+              Request received — this is a frontend demonstration; no real appraisal has been performed.
+            </div>
+            <button type="submit" class="btn-alberto btn-primary-alberto">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: LOGIN ================= -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content alberto-modal">
+      <div class="modal-header">
+        <h2 class="modal-title fs-4" id="loginModalLabel">Login</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="loginForm" class="form-alberto row g-3 needs-validation" novalidate>
+          <div class="col-12">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" class="form-control" id="loginEmail" required>
+            <div class="invalid-feedback">Please enter a valid email address.</div>
+          </div>
+          <div class="col-12">
+            <label for="loginPassword">Password</label>
+            <input type="password" class="form-control" id="loginPassword" required minlength="6">
+            <div class="invalid-feedback">Please enter a password of at least 6 characters.</div>
+          </div>
+          <div class="col-12">
+            <div id="loginSuccessAlert" class="alert-alberto-success d-none" role="alert">
+              <i class="bi bi-check-circle me-1" aria-hidden="true"></i> Login Successful
+            </div>
+            <button type="submit" class="btn-alberto btn-primary-alberto w-100">Login</button>
+          </div>
+          
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= CART PANEL (offcanvas) ================= -->
+<div class="offcanvas offcanvas-end shop-offcanvas" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title shop-title" id="cartOffcanvasLabel">Your Cart</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="cartItems" class="shop-list"></div>
+
+    <div id="cartEmpty" class="shop-empty d-none">
+      <i class="bi bi-bag" aria-hidden="true"></i>
+      <p>Your cart is empty.</p>
+      <a href="#products" class="btn-alberto btn-outline-alberto btn-sm-alberto" data-bs-dismiss="offcanvas">Browse Watches</a>
+    </div>
+
+    <div id="cartFooter" class="shop-footer d-none">
+      <div class="shop-total-row">
+        <span>Total <small id="cartItemCount"></small></span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button type="button" id="cartCheckoutBtn" class="btn-alberto btn-gold-alberto w-100">Proceed to Checkout</button>
+      <button type="button" id="cartClearBtn" class="btn-alberto btn-outline-alberto btn-sm-alberto w-100 mt-2">Clear Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= WISHLIST PANEL (offcanvas) ================= -->
+<div class="offcanvas offcanvas-end shop-offcanvas" tabindex="-1" id="wishlistOffcanvas" aria-labelledby="wishlistOffcanvasLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title shop-title" id="wishlistOffcanvasLabel">Your Wishlist</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column">
+    <div id="wishlistItems" class="shop-list"></div>
+
+    <div id="wishlistEmpty" class="shop-empty d-none">
+      <i class="bi bi-heart" aria-hidden="true"></i>
+      <p>No saved watches yet.</p>
+      <a href="#products" class="btn-alberto btn-outline-alberto btn-sm-alberto" data-bs-dismiss="offcanvas">Browse Watches</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: CHECKOUT (Buy Now / Cart checkout) ================= -->
+<div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content alberto-modal">
+      <div class="modal-header">
+        <div>
+          <span class="section-label">CHECKOUT</span>
+          <h2 class="modal-title fs-4" id="checkoutModalLabel">Complete Your Purchase</h2>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-4">
+
+          <!-- Checkout form -->
+          <div class="col-lg-7">
+            <form id="checkoutForm" class="form-alberto row g-3" novalidate>
+
+              <div class="col-12"><h3 class="checkout-heading">Customer Information</h3></div>
+              <div class="col-12">
+                <label for="coFullName">Full Name</label>
+                <input type="text" class="form-control" id="coFullName" autocomplete="name" required minlength="2" maxlength="80">
+                <div class="invalid-feedback">Please enter your full name.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="coEmail">Email Address</label>
+                <input type="email" class="form-control" id="coEmail" autocomplete="email" required>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="coPhone">Phone Number</label>
+                <input type="tel" class="form-control" id="coPhone" autocomplete="tel" required>
+                <div class="invalid-feedback" id="coPhoneFeedback">Please enter a valid phone number (7 to 15 digits).</div>
+              </div>
+
+              <div class="col-12"><h3 class="checkout-heading mt-2">Delivery Information</h3></div>
+              <div class="col-md-6">
+                <label for="coCountry">Country</label>
+                <select class="form-select" id="coCountry" autocomplete="country-name" required>
+                  <option value="">Select a country</option>
+                  <option>Australia</option>
+                  <option>Austria</option>
+                  <option>Bahrain</option>
+                  <option>Belgium</option>
+                  <option>Canada</option>
+                  <option>China</option>
+                  <option>Denmark</option>
+                  <option>Egypt</option>
+                  <option>France</option>
+                  <option>Germany</option>
+                  <option>Hong Kong</option>
+                  <option>India</option>
+                  <option>Ireland</option>
+                  <option>Italy</option>
+                  <option>Japan</option>
+                  <option>Kuwait</option>
+                  <option>Malaysia</option>
+                  <option>Netherlands</option>
+                  <option>New Zealand</option>
+                  <option>Norway</option>
+                  <option>Oman</option>
+                  <option>Pakistan</option>
+                  <option>Qatar</option>
+                  <option>Saudi Arabia</option>
+                  <option>Singapore</option>
+                  <option>South Africa</option>
+                  <option>South Korea</option>
+                  <option>Spain</option>
+                  <option>Sweden</option>
+                  <option>Switzerland</option>
+                  <option>Turkey</option>
+                  <option>United Arab Emirates</option>
+                  <option>United Kingdom</option>
+                  <option>United States</option>
+                  <option>Other</option>
+                </select>
+                <div class="invalid-feedback">Please select your country.</div>
+              </div>
+              <div class="col-md-6">
+                <label for="coCity">City</label>
+                <input type="text" class="form-control" id="coCity" autocomplete="address-level2" required minlength="2" maxlength="60">
+                <div class="invalid-feedback">Please enter your city.</div>
+              </div>
+              <div class="col-md-8">
+                <label for="coAddress">Full Address</label>
+                <input type="text" class="form-control" id="coAddress" autocomplete="street-address" required minlength="8" maxlength="150">
+                <div class="invalid-feedback">Please enter your full delivery address (at least 8 characters).</div>
+              </div>
+              <div class="col-md-4">
+                <label for="coPostal">Postal / ZIP Code</label>
+                <input type="text" class="form-control" id="coPostal" autocomplete="postal-code" required pattern="[A-Za-z0-9 \-]{3,10}">
+                <div class="invalid-feedback">Please enter a valid postal code.</div>
+              </div>
+
+              <div class="col-12"><h3 class="checkout-heading mt-2">Payment Method</h3></div>
+              <div class="col-12" role="radiogroup" aria-label="Payment method">
+                <label class="payment-option">
+                  <input class="form-check-input" type="radio" name="paymentMethod" value="Cash on Delivery" checked>
+                  <span><strong><i class="bi bi-cash-stack" aria-hidden="true"></i> Cash on Delivery</strong><small>Pay in cash when your watch is delivered.</small></span>
+                </label>
+                <label class="payment-option">
+                  <input class="form-check-input" type="radio" name="paymentMethod" value="Credit / Debit Card">
+                  <span><strong><i class="bi bi-credit-card" aria-hidden="true"></i> Credit / Debit Card</strong><small>Demonstration only. No card details are requested or stored.</small></span>
+                </label>
+                <label class="payment-option">
+                  <input class="form-check-input" type="radio" name="paymentMethod" value="Bank Transfer">
+                  <span><strong><i class="bi bi-bank" aria-hidden="true"></i> Bank Transfer</strong><small>Transfer instructions would be sent by email after confirmation.</small></span>
+                </label>
+              </div>
+
+              <div class="col-12">
+                <div id="checkoutError" class="checkout-error d-none" role="alert">
+                  <i class="bi bi-exclamation-circle me-1" aria-hidden="true"></i> Please complete all required fields highlighted above.
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Order summary -->
+          <div class="col-lg-5">
+            <aside class="order-summary" aria-labelledby="orderSummaryTitle">
+              <h3 class="checkout-heading" id="orderSummaryTitle">Order Summary</h3>
+              <div id="orderSummaryItems"></div>
+
+              <dl class="order-summary-meta">
+                <div>
+                  <dt>Delivery</dt>
+                  <dd id="summaryDelivery"></dd>
+                </div>
+                <div>
+                  <dt>Payment</dt>
+                  <dd id="summaryPayment"></dd>
+                </div>
+              </dl>
+
+              <div class="shop-total-row">
+                <span>Total Amount</span>
+                <strong id="summaryTotal">$0</strong>
+              </div>
+
+              <button type="submit" form="checkoutForm" id="confirmPurchaseBtn" class="btn-alberto btn-gold-alberto w-100 mt-3">
+                <i class="bi bi-shield-check" aria-hidden="true"></i> Confirm Purchase
+              </button>
+              <p class="form-text text-center mt-2 mb-0">This is a demonstration checkout. No real payment is taken.</p>
+            </aside>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MODAL: PURCHASE SUCCESS ================= -->
+<div class="modal fade" id="purchaseSuccessModal" tabindex="-1" aria-labelledby="purchaseSuccessLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content purchase-success">
+      <div class="modal-body text-center">
+        <div class="success-emblem"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <span class="success-eyebrow">ORDER CONFIRMED</span>
+        <h2 id="purchaseSuccessLabel">Purchase Successful!</h2>
+        <div class="success-divider" aria-hidden="true"></div>
+        <p class="success-lead">Your order has been successfully placed. Thank you for choosing Alberto Clocks.</p>
+        <p class="success-detail">Your order details have been recorded. You will receive further information regarding your order and delivery.</p>
+        <div class="success-ref">Order reference <strong id="successOrderRef"></strong></div>
+        <button type="button" class="btn-alberto btn-gold-alberto px-5" data-bs-dismiss="modal">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= BACK TO TOP BUTTON ================= -->
+<button type="button" id="backToTopBtn" class="back-to-top-btn" aria-label="Back to top">
+  <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</button>
+
+<!-- Bootstrap 5.3.8 JS bundle (CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Project scripts (order matters: data first, then features, then app) -->
+<script src="js/products.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/visitor.js"></script>
+<script src="js/geolocation.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/app.js"></script>
+<script src="js/cart-wishlist.js"></script>
+<script src="js/shop.js"></script>
+</body>
+</html>
