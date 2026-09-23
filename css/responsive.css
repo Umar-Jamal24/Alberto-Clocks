@@ -1,0 +1,175 @@
+/* ==========================================================================
+   ALBERTO CLOCKS — responsive.css
+   Breakpoint adjustments layered on top of style.css and Bootstrap's grid.
+   Tested conceptually at: 320px, 768px, 1024px, 1440px.
+   ========================================================================== */
+
+/* ---------- Up to 575px (small phones) ---------- */
+@media (max-width: 575.98px) {
+  :root {
+    --section-pad-y: 3.5rem;
+  }
+
+  .hero-section {
+    min-height: 78vh;
+  }
+
+  .hero-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn-alberto {
+    width: 100%;
+  }
+
+  .brand-mark {
+    font-size: 1.2rem;
+  }
+
+  .visitor-counter {
+    display: none;
+  }
+
+  .announcement-bar {
+    font-size: 0.72rem;
+  }
+
+  .about-media img {
+    min-height: 260px;
+  }
+
+  .product-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-field {
+    max-width: none;
+  }
+
+  .category-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+  .category-tab {
+    flex-shrink: 0;
+  }
+
+  table.price-table {
+    font-size: 0.8rem;
+  }
+  table.price-table thead th,
+  table.price-table tbody td {
+    padding: 0.6rem 0.7rem;
+  }
+
+  .gallery-grid img {
+    height: 170px;
+  }
+
+  .ticker-track span {
+    font-size: 0.72rem;
+    padding: 0 1.4rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* ---------- 576px to 767px (large phones) ---------- */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-content h1 {
+    font-size: 2.6rem;
+  }
+  .gallery-grid img {
+    height: 190px;
+  }
+}
+
+/* ---------- Tablet: 768px and above ---------- */
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  :root {
+    --section-pad-y: 5rem;
+  }
+  .hero-content {
+    max-width: 540px;
+  }
+  .about-media img {
+    min-height: 340px;
+  }
+}
+
+/* ---------- Laptop: 1024px and above ---------- */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  :root {
+    --container-width: 1040px;
+  }
+}
+
+/* ---------- Desktop: 1440px and above ---------- */
+@media (min-width: 1440px) {
+  :root {
+    --container-width: 1260px;
+    --section-pad-y: 7.5rem;
+  }
+  .hero-content h1 {
+    font-size: 4.4rem;
+  }
+}
+
+/* ---------- Mobile nav polish (Bootstrap offcanvas) ---------- */
+@media (max-width: 991.98px) {
+  .main-nav .nav-link::after {
+    display: none;
+  }
+  .main-nav {
+    padding-top: 1rem;
+  }
+  .main-nav .nav-link {
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.9rem 0.2rem !important;
+  }
+  .header-actions-mobile {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+  }
+}
+
+@media (min-width: 992px) {
+  .header-actions-mobile {
+    display: none;
+  }
+}
+
+/* Ensure no horizontal scroll on very narrow devices */
+@media (max-width: 340px) {
+  .container-alberto {
+    padding: 0 1rem;
+  }
+  .hero-content h1 {
+    font-size: 1.85rem;
+  }
+}
+
+/* Keep modal usable on mobile */
+@media (max-width: 767.98px) {
+  .modal-alberto-image {
+    min-height: 220px;
+  }
+  .modal-dialog.modal-lg {
+    margin: 0.75rem;
+  }
+}
